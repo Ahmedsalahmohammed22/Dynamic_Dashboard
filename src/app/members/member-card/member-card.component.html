@@ -1,0 +1,17 @@
+<div class="card mb-4" *ngIf="user">
+    <div class="card-img-wrapper">
+        <img src="{{user.avatar}}" alt="{{user.first_name}}" class="card-img-top">
+        <ul class="list-inline member-icons animate text-center mt-3">
+            <li class="list-inline-item">
+                <button class="btn btn-primary" routerLink="/users/{{user.id}}"><i class="fa fa-user m-1"> Details</i></button>
+            </li>
+        </ul>
+    </div>  
+    <div class="card-body p-1">
+        <h6 class="card-title text-center mb-1">
+            <i class="fa fa-user me-2"></i>
+            {{user.first_name}}, {{user.last_name}}
+        </h6>
+        <p class="card-text text-muted text-center">{{user.email}}</p>
+    </div>
+</div>
